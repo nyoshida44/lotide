@@ -11,8 +11,6 @@ const assertEqual = function(actual, expected) {
 const eqArrays = function(arrayCheck, arrayWant) {
   let arrayResult = false;
   for (i = 0; i < arrayCheck.length; i++) {
-    console.log(arrayCheck[i]);
-    console.log(arrayWant[i]);
     if (arrayCheck[i] === arrayWant[i]) arrayResult = true;
     else arrayResult = false;
   }
@@ -21,3 +19,7 @@ const eqArrays = function(arrayCheck, arrayWant) {
 
 // Tests
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // => should FAIL
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => should PASS
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true); // => should FAIL
+assertEqual(eqArrays(["1", "2", 3], ["1", "2", 3]), false); // => should FAIL
