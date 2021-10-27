@@ -1,9 +1,9 @@
 // eqArrays Function
 const eqArrays = function(arrayCheck, arrayWant) {
   let arrayResult = false;
-  for (i = 0; i < arrayCheck.length; i++) {
+  for (let i = 0; i < arrayCheck.length; i++) {
     if (arrayCheck[i] === arrayWant[i]) arrayResult = true;
-    else arrayResult = false;
+    else return false;
   }
   return arrayResult;
 };
@@ -17,6 +17,18 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 
 // without Function
 
-const without = function() {
-
+const without = function(arraySource, arrayRemove) {
+  let withoutArray = [];
+  console.log(eqArrays(arraySource, arrayRemove));
+  if (eqArrays(arraySource, arrayRemove) === false) {
+    for (let i = 0; i < arraySource.length; i++) {
+      if (arraySource[i] !== arrayRemove[i]) {
+        withoutArray.push(arraySource[i]);
+      }
+    }
+  }
+  return withoutArray;
 };
+
+console.log(without([1, 2, 3], [1]));
+console.log(without(["1", "2", "3"], [1, 2, "3"]));
