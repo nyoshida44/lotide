@@ -8,7 +8,9 @@ const assertEqual = function(actual, expected) {
 };
 
 const findKeyByValue = function(scanObject, valueLookup) {
-
+  for (const genre in scanObject) {
+    if (scanObject[genre] === valueLookup) return genre;  
+  }
 };
 
 const bestTVShowsByGenre = { 
@@ -17,5 +19,8 @@ const bestTVShowsByGenre = {
   drama:  "The Wire"
 };
 
-//assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-//assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+// Tests
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Expanse"), "sci_fi");
