@@ -21,4 +21,19 @@ const countLetters = function(wordToCount) {
   return letterStorage;
 };
 
-console.log(countLetters("Letter in Paris"));
+// Test
+
+const string = "letter in paris";
+const test = countLetters(string);
+
+console.log(test);
+
+assertEqual(test["l"], 1);
+assertEqual(test["e"], 2);
+assertEqual(test["t"], 2);
+assertEqual(test["r"], 2);
+assertEqual(test["i"], 2);
+assertEqual(test["n"], 1);
+assertEqual(test["p"], 1);
+assertEqual(test["a"], 1);
+assertEqual(test["s"], 1);
