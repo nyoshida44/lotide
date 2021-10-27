@@ -10,9 +10,9 @@ const assertEqual = function(actual, expected) {
 // eqArrays Function
 const eqArrays = function(arrayCheck, arrayWant) {
   let arrayResult = false;
-  for (i = 0; i < arrayCheck.length; i++) {
+  for (let i = 0; i < arrayCheck.length; i++) {
     if (arrayCheck[i] === arrayWant[i]) arrayResult = true;
-    else arrayResult = false;
+    else return false;
   }
   return arrayResult;
 };
