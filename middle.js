@@ -1,20 +1,3 @@
-// eqArrays Function
-const eqArrays = function(arrayCheck, arrayWant) {
-  let arrayResult = false;
-  for (let i = 0; i < arrayCheck.length; i++) {
-    if (arrayCheck[i] === arrayWant[i] && arrayCheck.length === arrayWant.length) arrayResult = true;
-    else return false;
-  }
-  return arrayResult;
-};
-
-// assertArraysEqual Function
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (eqArrays(arrayOne, arrayTwo) === true) {
-    console.log(`😀😀😀 Assertion Passed: ${arrayOne} === ${arrayTwo}`);
-  } else console.log(`💩💩💩 Assertion Failed: ${arrayOne} !== ${arrayTwo}`);
-};
-
 // middle Function
 const middle = function(array) {
   let middleArray = [];
@@ -33,16 +16,4 @@ const middle = function(array) {
   return middleArray;
 };
 
-
-//tests
-let test1 = [25, 7, 13, 69, "red", true, 32];
-console.log(middle(test1));
-assertArraysEqual(test1, [25, 7, 13, 69, "red", true, 32]);
-
-let test2 = [1, 2, 3, 4, 5, 6];
-console.log(middle(test2));
-assertArraysEqual(test2, [1, 2, 3, 4, 5, 6]);
-
-let test3 = [7];
-console.log(middle([test3]));
-assertArraysEqual(test3, [7]);
+module.exports = middle;
