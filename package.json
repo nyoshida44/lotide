@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
-  "version": "1.0.0",
-  "description": "lotide project",
+  "name": "@nyoshida44/lotide",
+  "version": "1.0.1",
+  "description": "Nick Yoshida's lotide project",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/nyoshida44/lotide.git"
   },
-  "author": "Nick Yoshida",
+  "author": "Nicholas Yoshida <nyoshida44@gmail.com> (https://github.com/nyoshida44)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nyoshida44/lotide/issues"
