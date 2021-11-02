@@ -40,3 +40,5 @@ let destinations =
 
 console.log(findKey(destinations, x => x.stars === 3));
 assertEqual(findKey(destinations, x => x.stars === 3), "21"); // => 21
+
+module.exports = findKey;

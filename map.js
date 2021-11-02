@@ -39,3 +39,5 @@ const empty = [true];
 const results3 = map(empty, word => word[0]);
 assertArraysEqual(results3, [undefined]);
 console.log(results3);
+
+module.exports = map;
